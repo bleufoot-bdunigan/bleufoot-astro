@@ -1,0 +1,36 @@
+.legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .legal-content h2 {
+      margin-top: 38px;
+      font-size: 30px;
+    }
+
+    .legal-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal-content p,
+    .legal-content li {
+      color: var(--ink-500);
+    }
+
+    .legal-content ul {
+      padding-left: 24px;
+    }
+
+    .legal-content li {
+      margin: 8px 0;
+    }
+
+    .legal-content a {
+      color: var(--blue-600);
+      font-weight: 700;
+    }
+
+    .legal-updated {
+      margin-top: 8px;
+      color: rgba(255,255,255,.72);
+    }

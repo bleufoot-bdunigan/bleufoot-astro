@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bleufoot.com/network-services#webpage",
+      "url": "https://www.bleufoot.com/network-services",
+      "name": "Business Network & Wi-Fi Services in Austin | Bleufoot",
+      "description": "Business network services in Austin, including firewalls, switching, VLANs, Wi-Fi, VPN access, structured cabling, cleanup, and network monitoring.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/network-services#service"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/network-services#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bleufoot.com/network-services#service"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/network-services#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bleufoot.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Network Services",
+          "item": "https://www.bleufoot.com/network-services"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.bleufoot.com/network-services#service",
+      "name": "Business Network Services",
+      "serviceType": "Business network installation, management, and monitoring",
+      "url": "https://www.bleufoot.com/network-services",
+      "description": "Business network services in Austin, including firewalls, switching, VLANs, Wi-Fi, VPN access, structured cabling, cleanup, and network monitoring.",
+      "provider": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Business Network & Wi-Fi Services in Austin | Bleufoot"}
+  description={"Business network services in Austin, including firewalls, switching, VLANs, Wi-Fi, VPN access, structured cabling, cleanup, and network monitoring."}
+  canonical={"https://www.bleufoot.com/network-services"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage="services"
+  openGraph={{"title": "Business Network & Wi-Fi Services in Austin | Bleufoot", "description": "Business network services including firewalls, switching, VLANs, Wi-Fi, VPN access, structured cabling, and monitoring.", "url": "https://www.bleufoot.com/network-services", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Network Services</h4></div><h1>Business networks that are secure, reliable, and built to scale.</h1><p>Your network connects employees, devices, applications, cloud services, phones, security systems, and business operations. It needs to be designed and managed with intention.</p></div><div class="hero-panel"><ul><li>Firewall management</li><li>Switching and VLANs</li><li>Business Wi‑Fi</li><li>VPN and remote access</li></ul></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="kicker"><h4>Connectivity with structure</h4></div><h2>Reliable networks start with clear design and ongoing visibility.</h2></div><p>Bleufoot helps businesses reduce disruption, strengthen security, improve coverage, and support the way teams actually work.</p></div>
+<div class="grid grid-3">
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h3>Firewall Management</h3><p>Firewall configuration, access rules, VPN settings, segmentation, and practical security controls.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5" cy="19" r="2.5"></circle><circle cx="19" cy="19" r="2.5"></circle><path d="M10.8 7.2L6.2 16.8M13.2 7.2l4.6 9.6M7.5 19h9"></path></svg></span><h3>Switching &amp; Segmentation</h3><p>Managed switching, VLAN design, device segmentation, and organized connectivity for business environments.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0"></path><path d="M8.5 16a5 5 0 0 1 7 0"></path><path d="M12 20h.01"></path></svg></span><h3>Wireless Design</h3><p>Wi‑Fi planning, coverage improvement, guest networks, access point placement, and performance troubleshooting.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><h3>VPN &amp; Remote Access</h3><p>Secure remote access and site connectivity designed around business needs and risk reduction.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-2.8-2.8 2.2-2.6z"></path></svg></span><h3>Cabling &amp; Cleanup</h3><p>Structured cabling coordination, rack organization, labeling, and documentation to make networks easier to support.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg></span><h3>Network Monitoring</h3><p>Visibility into device health, performance, uptime, and connectivity before issues become business disruptions.</p></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Strengthen the connections your business depends on</h4>
+</div>
+<h2>
+      Build a network that is reliable, secure, and easier to support.
+    </h2>
+<p>
+      Whether you are troubleshooting unreliable connectivity,
+      improving Wi-Fi coverage, replacing aging equipment, securing
+      remote access, organizing cabling, or adding network monitoring,
+      Bleufoot can help you determine the right next step.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request?service=Network%20Services">
+  Discuss Your Network Needs →
+</a>
+<a class="btn btn-secondary" href="/contact">
+        Ask a Network Question
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

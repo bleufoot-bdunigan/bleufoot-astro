@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.bleufoot.com/quote-request#webpage",
+      "url": "https://www.bleufoot.com/quote-request",
+      "name": "Request an IT Consultation or Quote | Bleufoot Solutions",
+      "description": "Request a technology review, managed IT support, consulting, cybersecurity, cloud, infrastructure, or network services from Bleufoot Solutions in Austin.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/quote-request#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/quote-request#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Request a Quote",
+          "item": "https://www.bleufoot.com/quote-request"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Request an IT Consultation or Quote | Bleufoot Solutions"}
+  description={"Request a technology consultation, support review, or project quote from Bleufoot Solutions for businesses in Austin and Central Texas."}
+  canonical={"https://www.bleufoot.com/quote-request"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  openGraph={{"title": "Request an IT Consultation or Quote | Bleufoot Solutions", "description": "Request managed IT support, consulting, cybersecurity, cloud, infrastructure, network services, or a technology review.", "url": "https://www.bleufoot.com/quote-request", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+  pageStylesheet={"/assets/css/calendar-booking.css"}
+  calendarAssets
+  turnstile
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Request a Quote</h4></div><h1>Start with a technology review, support request, or project conversation.</h1><p>Use this page for managed services, consulting, cybersecurity, networking, cloud, infrastructure, or general technology support requests.</p></div><div class="hero-panel"><ul><li>Describe the business need</li><li>Share what is currently not working</li><li>Identify urgency and timeline</li><li>We help define the next step</li></ul></div></div></section>
+<section class="section section-soft"><div class="container split">
+<aside class="sticky-note">
+<div class="kicker">
+<h4>What happens next</h4>
+</div>
+<h2>
+    A practical first conversation.
+  </h2>
+<p>
+    We review your request, clarify your needs, and help determine
+    whether you need support, a project, an assessment, or a
+    longer-term technology partner.
+  </p>
+<div class="calendar-inline-action">
+<h3>
+      Prefer to choose a time now?
+    </h3>
+<p>
+      View current availability and reserve a consultation directly
+      on the Bleufoot calendar.
+    </p>
+<div class="calendar-scheduling-button">
+<script is:inline>
+  (function () {
+    var target = document.currentScript;
+    var container = target.parentElement;
+
+    var bookingUrl =
+      "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1hev0pcRYoBCskCyhMoUS8XMqg759lxoUfzrZnDYb2mv8XdyA0HzFz9RYjy75v06JIDpFQ8YmE?gv=true";
+
+    function styleCalendarButton() {
+      var button = container.querySelector(
+        "button, [role='button']"
+      );
+
+      if (!button) {
+        return false;
+      }
+
+      button.classList.add("bleufoot-calendar-button");
+
+      return true;
+    }
+
+    function setupMobileScheduler() {
+      var overlay = document.getElementById(
+        "calendar-mobile-overlay"
+      );
+
+      var frame = document.getElementById(
+        "calendar-mobile-frame"
+      );
+
+      var returnButton = document.getElementById(
+        "calendar-mobile-return"
+      );
+
+      if (!overlay || !frame || !returnButton) {
+        return;
+      }
+
+      var openButton = document.createElement("button");
+
+      openButton.type = "button";
+      openButton.className = "btn btn-light";
+      openButton.textContent =
+        "Schedule a Consultation →";
+
+      openButton.setAttribute(
+        "aria-haspopup",
+        "dialog"
+      );
+
+      openButton.setAttribute(
+        "aria-controls",
+        "calendar-mobile-overlay"
+      );
+
+      openButton.style.width = "100%";
+
+      function openScheduler() {
+        if (!frame.getAttribute("src")) {
+          frame.setAttribute("src", bookingUrl);
+        }
+
+        overlay.hidden = false;
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.classList.add(
+          "calendar-overlay-open"
+        );
+
+        returnButton.focus();
+      }
+
+      function closeScheduler() {
+        overlay.hidden = true;
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.classList.remove(
+          "calendar-overlay-open"
+        );
+
+        openButton.focus();
+      }
+
+      openButton.addEventListener(
+        "click",
+        openScheduler
+      );
+
+      returnButton.addEventListener(
+        "click",
+        closeScheduler
+      );
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+          if (
+            event.key === "Escape" &&
+            !overlay.hidden
+          ) {
+            closeScheduler();
+          }
+        }
+      );
+
+      container.appendChild(openButton);
+
+      var mobileNote = document.createElement("p");
+
+      mobileNote.className =
+        "calendar-mobile-note";
+
+      mobileNote.textContent =
+        "The scheduler opens full screen. Use Return to Bleufoot at the top when finished.";
+
+      container.appendChild(mobileNote);
+    }
+
+    window.addEventListener("load", function () {
+      var isMobile = window.matchMedia(
+        "(max-width: 700px)"
+      ).matches;
+
+      if (isMobile) {
+        setupMobileScheduler();
+        return;
+      }
+
+      var observer = new MutationObserver(function () {
+        if (styleCalendarButton()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(container, {
+        childList: true,
+        subtree: true
+      });
+
+      calendar.schedulingButton.load({
+        url: bookingUrl,
+        color: "#039BE5",
+        label: "Schedule a Consultation →",
+        target: target
+      });
+
+      styleCalendarButton();
+    });
+  })();
+</script>
+</div>
+</div>
+</aside>
+<form action="/api/quote" class="form-card" method="POST">
+<div class="form-grid">
+<div class="form-field">
+<label for="name">Name</label>
+<input autocomplete="name" id="name" name="name" required="" type="text"/>
+</div>
+<div class="form-field">
+<label for="company">Company</label>
+<input autocomplete="organization" id="company" name="company" type="text"/>
+</div>
+<div class="form-field">
+<label for="email">Email</label>
+<input autocomplete="email" id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-field">
+<label for="phone">Phone</label>
+<input autocomplete="tel" id="phone" name="phone" type="tel"/>
+</div>
+<div class="form-field full">
+<label for="service">Service Interest</label>
+<select id="service" name="service" required="">
+<option disabled="" selected="" value="">Select a service</option>
+<option value="Managed Technology Services">Managed Technology Services</option>
+<option value="Strategic Technology Consulting">Strategic Technology Consulting</option>
+<option value="Cloud &amp; Infrastructure Management">
+  Cloud &amp; Infrastructure Management
+</option>
+<option value="Network Services">Network Services</option>
+<option value="Cybersecurity Services">Cybersecurity Services</option>
+<option value="General Technology Support">General Technology Support</option>
+</select>
+</div>
+<div class="form-field full">
+<label for="message">Message</label>
+<textarea id="message" name="message" required=""></textarea>
+</div>
+</div>
+<div class="cf-turnstile" data-sitekey="0x4AAAAAADw8Y0fCheEMPPQk"></div>
+<div class="security-notice">
+<strong>Security Notice:</strong> Please do not include passwords, access credentials, payment details, or sensitive system information in this form. If secure information is needed, we will provide a safer method after we contact you.
+  </div>
+<button class="btn btn-primary" type="submit">Send Request →</button>
+</form></div></section>
+</main>
+<div aria-hidden="true" aria-labelledby="calendar-mobile-title" aria-modal="true" class="calendar-mobile-overlay" hidden="" id="calendar-mobile-overlay" role="dialog">
+<div class="calendar-mobile-toolbar">
+<p class="calendar-mobile-title" id="calendar-mobile-title">
+      Schedule a Consultation
+    </p>
+<button class="btn btn-light calendar-mobile-return" id="calendar-mobile-return" type="button">
+      Return to Bleufoot
+    </button>
+</div>
+<iframe allow="fullscreen" class="calendar-mobile-frame" id="calendar-mobile-frame" title="Schedule a consultation with Bleufoot Solutions"></iframe>
+</div>
+
+<!-- Google Calendar appointment scheduling -->
+</BaseLayout>

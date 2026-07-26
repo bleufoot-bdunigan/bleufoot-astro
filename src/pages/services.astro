@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.bleufoot.com/services#webpage",
+      "url": "https://www.bleufoot.com/services",
+      "name": "Business IT Services in Austin, TX | Bleufoot Solutions",
+      "description": "Explore managed IT, strategic consulting, cybersecurity, cloud infrastructure, and network services from Bleufoot Solutions in Austin, Texas.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/services#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bleufoot.com/services#service-list"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/services#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bleufoot.com/services"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.bleufoot.com/services#service-list",
+      "name": "Bleufoot Solutions Technology Services",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Strategic Technology Consulting",
+            "url": "https://www.bleufoot.com/consulting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Managed Technology Services",
+            "url": "https://www.bleufoot.com/managed-services"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Cloud and Infrastructure Management",
+            "url": "https://www.bleufoot.com/infrastructure"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Network Services",
+            "url": "https://www.bleufoot.com/network-services"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Cybersecurity Services",
+            "url": "https://www.bleufoot.com/cybersecurity"
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Business IT Services in Austin, TX | Bleufoot Solutions"}
+  description={"Explore managed IT, strategic consulting, cybersecurity, cloud infrastructure, and network services from Bleufoot Solutions in Austin, Texas."}
+  canonical={"https://www.bleufoot.com/services"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage="services"
+  openGraph={{
+    "title": "Business IT Services in Austin, TX | Bleufoot Solutions",
+    "description": "Managed IT, strategic consulting, cybersecurity, cloud infrastructure, and network services for Austin businesses.",
+    "url": "https://www.bleufoot.com/services",
+    "image": "https://www.bleufoot.com/assets/img/og-image.png",
+    "imageType": "image/png",
+    "imageWidth": "1200",
+    "imageHeight": "630",
+    "imageAlt": "Bleufoot Solutions technology services"
+  }}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Services</h4></div><h1>Technology services that help you plan, build, secure, and grow.</h1><p>Bleufoot combines advisory thinking, engineering depth, proactive support, and practical cybersecurity into one technology partnership.</p></div><div class="hero-panel"><ul><li>Strategy before spending</li><li>Support before disruption</li><li>Security before exposure</li><li>Documentation before confusion</li></ul></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="kicker"><h4>Service ecosystem</h4></div><h2>Five connected ways we help your business.</h2></div><p>Each service can stand on its own, but the strongest results happen when planning, support, infrastructure, networking, and security work together.</p></div>
+<div class="grid grid-3">
+<a class="card service-card" href="/consulting"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3l8 18-8-4-8 4 8-18z"></path><path d="M12 3v14"></path></svg></span><h3>Strategic Technology Consulting</h3><p>Roadmaps, assessments, vCIO advisory, project planning, modernization strategy, and vendor guidance.</p><span class="learn">View Consulting →</span></a>
+<a class="card service-card" href="/managed-services"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M5 13h3v6H5zM16 13h3v6h-3z"></path><path d="M16 19a4 4 0 0 1-4 2"></path></svg></span><h3>Managed Technology Services</h3><p>Ongoing support, monitoring, patching, endpoint management, user assistance, cloud productivity support, and documentation.</p><span class="learn">View Managed Services →</span></a>
+<a class="card service-card" href="/infrastructure"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><h3>Cloud &amp; Infrastructure</h3><p>Secure, scalable systems across servers, virtualization, business applications, cloud platforms, backups, and hybrid environments.</p><span class="learn">View Infrastructure →</span></a>
+<a class="card service-card" href="/network-services"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5" cy="19" r="2.5"></circle><circle cx="19" cy="19" r="2.5"></circle><path d="M10.8 7.2L6.2 16.8M13.2 7.2l4.6 9.6M7.5 19h9"></path></svg></span><h3>Network Services</h3><p>Reliable wired, wireless, VPN, firewall, switching, segmentation, cabling, and network monitoring solutions.</p><span class="learn">View Network Services →</span></a>
+<a class="card service-card" href="/cybersecurity"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h3>Cybersecurity Services</h3><p>Security assessments, MFA, endpoint protection, account security, backup planning, monitoring, and incident readiness.</p><span class="learn">View Cybersecurity →</span></a>
+<div class="card service-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg></span><h3>Technology Reviews</h3><p>Not sure where to start? We can evaluate your environment, identify priorities, and recommend a practical path forward.</p><a class="learn" href="/quote-request">Request a Review →</a></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Start with the business need</h4>
+</div>
+<h2>
+      You do not need to know which technology service to request.
+    </h2>
+<p>
+      Tell us what is not working, what your business is trying to
+      accomplish, or where you need greater confidence. Bleufoot can
+      review the situation, identify the relevant service areas, and
+      help define a practical next step.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request">
+        Request a Technology Review →
+      </a>
+<a class="btn btn-secondary" href="/contact">
+        Ask a Question
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

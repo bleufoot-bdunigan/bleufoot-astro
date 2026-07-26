@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Bleufoot Solutions</title>
+  <desc id="logoDesc">Text logo reading Bleufoot Solutions.</desc>
+  <defs>
+    <linearGradient id="bleu" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4fc3df"/>
+      <stop offset="1" stop-color="#1a83bd"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="210" fill="none"/>
+
+  <!-- Center the Bleufoot wordmark over SOLUTIONS -->
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="255" y="112" font-size="92" letter-spacing="-4">
+      <tspan fill="url(#bleu)" font-weight="800">Bleu</tspan><tspan fill="#f4f7fb" font-weight="700">foot</tspan>
+    </text>
+
+    <line x1="24" y1="138" x2="486" y2="138" stroke="#1d9bd7" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+
+    <text x="255" y="188" font-size="44" letter-spacing="24" fill="#dce7f4" font-weight="300">SOLUTIONS</text>
+  </g>
+</svg>

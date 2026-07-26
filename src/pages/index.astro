@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bleufoot.com/#webpage",
+      "url": "https://www.bleufoot.com/",
+      "name": "Managed IT Services & IT Consulting in Austin | Bleufoot",
+      "description": "Bleufoot Solutions provides managed IT services, IT consulting, cybersecurity, cloud infrastructure, and network support for businesses in Austin, Texas.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Managed IT Services & IT Consulting in Austin | Bleufoot"}
+  description={"Bleufoot Solutions provides managed IT services, IT consulting, cybersecurity, cloud infrastructure, and network support for businesses in Austin, Texas."}
+  canonical={"https://www.bleufoot.com/"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage={"home"}
+  openGraph={{"title": "Managed IT Services & IT Consulting in Austin | Bleufoot", "description": "Managed IT services, strategic IT consulting, cybersecurity, cloud infrastructure, and network support for Austin businesses.", "url": "https://www.bleufoot.com/", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow"><h4>Technology advisory &amp; managed services</h4></div>
+<h1>Technology support, strategy, and security built around your business.</h1>
+<p>Bleufoot Solutions helps growing organizations plan, secure, manage, and modernize their technology with practical consulting, proactive support, and engineering-focused service.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="/quote-request">Schedule a Technology Review →</a>
+<a class="btn btn-secondary" href="/services">Explore Services</a>
+</div>
+</div>
+<div class="tech-orbit"><div class="orbit-center"><div class="center-mark center-wordmark"><span class="bleu">Bleu</span><span class="foot">foot</span></div></div><div class="orbit-item top"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Your People</span></div><div class="orbit-item right"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg><span>Cloud Services</span></div><div class="orbit-item bottom-right"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg><span>Data &amp; Backup</span></div><div class="orbit-item bottom"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M5 13h3v6H5zM16 13h3v6h-3z"></path><path d="M16 19a4 4 0 0 1-4 2"></path></svg><span>Monitoring &amp; Support</span></div><div class="orbit-item bottom-left"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg><span>Cybersecurity</span></div><div class="orbit-item left"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0"></path><path d="M8.5 16a5 5 0 0 1 7 0"></path><path d="M12 20h.01"></path></svg><span>Network</span></div></div>
+</div>
+</section>
+<section class="trust-strip">
+<div class="container trust-card">
+<div class="trust-item"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><strong>Austin-based technology partner</strong></div>
+<div class="trust-item"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><strong>Strategic consulting + managed support</strong></div>
+<div class="trust-item"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><strong>Infrastructure, cloud, network, and cybersecurity</strong></div>
+<div class="trust-item"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg></span><strong>Practical guidance without vendor pressure</strong></div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker"><h4>We solve real business problems</h4></div><h2>Most technology problems start before something breaks.</h2></div>
+<p>Outdated systems, security gaps, and disorganized technology create risk, frustration, and hidden costs. Bleufoot brings clarity, structure, and proactive support so your business can run better.</p>
+</div>
+<div class="grid grid-5">
+<div class="card problem-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg></span><h4>Unreliable Systems</h4><p>Downtime and slow performance impact productivity and customer experience.</p></div>
+<div class="card problem-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h4>Weak Security</h4><p>Poor account security and outdated systems leave your business vulnerable.</p></div>
+<div class="card problem-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="6" rx="2" width="18" x="3" y="4"></rect><rect height="6" rx="2" width="18" x="3" y="14"></rect><path d="M7 7h.01M7 17h.01"></path></svg></span><h4>Aging Infrastructure</h4><p>Old hardware and unsupported software increase risk and limit growth.</p></div>
+<div class="card problem-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><h4>Cloud Mismanagement</h4><p>Cloud tools need the right setup, management, and oversight.</p></div>
+<div class="card problem-card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5" cy="19" r="2.5"></circle><circle cx="19" cy="19" r="2.5"></circle><path d="M10.8 7.2L6.2 16.8M13.2 7.2l4.6 9.6M7.5 19h9"></path></svg></span><h4>Vendor Chaos</h4><p>Too many vendors and no coordination lead to gaps, delays, and finger pointing.</p></div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker"><h4>Our services</h4></div><h2>A complete technology partner for your business.</h2></div>
+<p>From strategy to support, we help you plan, build, connect, protect, and manage the technology your business depends on.</p>
+</div>
+<div class="grid grid-5">
+<a class="card service-card" href="/consulting"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3l8 18-8-4-8 4 8-18z"></path><path d="M12 3v14"></path></svg></span><h3>Plan</h3><p><strong>Strategic Consulting</strong></p><p>Technology strategy, roadmaps, vCIO services, assessments, and project planning.</p><span class="learn">Learn More →</span></a>
+<a class="card service-card" href="/managed-services"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M5 13h3v6H5zM16 13h3v6h-3z"></path><path d="M16 19a4 4 0 0 1-4 2"></path></svg></span><h3>Support</h3><p><strong>Managed IT Services</strong></p><p>Proactive monitoring, help desk, endpoint management, and day-to-day support.</p><span class="learn">Learn More →</span></a>
+<a class="card service-card" href="/infrastructure"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><h3>Build</h3><p><strong>Cloud &amp; Infrastructure</strong></p><p>Servers, cloud platforms, virtualization, business applications, and systems management.</p><span class="learn">Learn More →</span></a>
+<a class="card service-card" href="/network-services"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5" cy="19" r="2.5"></circle><circle cx="19" cy="19" r="2.5"></circle><path d="M10.8 7.2L6.2 16.8M13.2 7.2l4.6 9.6M7.5 19h9"></path></svg></span><h3>Connect</h3><p><strong>Network Solutions</strong></p><p>Firewalls, switching, Wi‑Fi, VPN, cabling, and network monitoring built for reliability.</p><span class="learn">Learn More →</span></a>
+<a class="card service-card" href="/cybersecurity"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h3>Protect</h3><p><strong>Cybersecurity</strong></p><p>Security assessments, endpoint protection, MFA, backups, and incident readiness.</p><span class="learn">Learn More →</span></a>
+</div>
+</div>
+</section>
+<section class="section section-dark">
+<div class="container process">
+<div><div class="kicker"><h4>How Bleufoot works</h4></div><h2>A proven process. Better outcomes.</h2><p style="color:rgba(255,255,255,.72);margin-top:18px;">Technology improves when support, security, documentation, and planning work together.</p></div>
+<div class="process-steps">
+<div class="process-step"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3l8 18-8-4-8 4 8-18z"></path><path d="M12 3v14"></path></svg></span><h4>Discover</h4><p>We evaluate your environment, risks, goals, and business needs.</p></div>
+<div class="process-step"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-2.8-2.8 2.2-2.6z"></path></svg></span><h4>Stabilize</h4><p>We address reliability issues, documentation gaps, and support pain points.</p></div>
+<div class="process-step"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h4>Secure</h4><p>We strengthen identity, endpoints, networks, cloud services, backups, and access controls.</p></div>
+<div class="process-step"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 7-9"></path><path d="M14 6h6v6"></path></svg></span><h4>Improve</h4><p>We help you plan smarter investments and operate with more confidence.</p></div>
+</div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker"><h4>Why businesses choose Bleufoot</h4></div><h2>Practical technology guidance without unnecessary complexity.</h2></div>
+<p>Bleufoot is built for organizations that need a trusted technical partner who can explain options clearly, reduce risk, and help technology support business goals.</p>
+</div>
+<div class="value-panel" style="color:#fff;">
+<div class="panel" style="background:linear-gradient(145deg,#06192d,#0a2e55);"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><h3>Business-aligned strategy</h3><p>Technology decisions should be guided by the way your organization actually works.</p></div>
+<div class="panel" style="background:linear-gradient(145deg,#06192d,#0a2e55);"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M5 13h3v6H5zM16 13h3v6h-3z"></path><path d="M16 19a4 4 0 0 1-4 2"></path></svg></span><h3>Proactive support</h3><p>Monitoring, maintenance, and documentation help prevent avoidable disruptions.</p></div>
+<div class="panel" style="background:linear-gradient(145deg,#06192d,#0a2e55);"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h3>Security built in</h3><p>Every support decision affects access, identity, devices, backups, and risk.</p></div>
+<div class="panel" style="background:linear-gradient(145deg,#06192d,#0a2e55);"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 7-9"></path><path d="M14 6h6v6"></path></svg></span><h3>Long-term partnership</h3><p>We help you support today’s needs while preparing for tomorrow’s growth.</p></div>
+</div>
+</div>
+</section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Start with a practical conversation</h4>
+</div>
+<h2>
+      Tell us what your business needs technology to do better.
+    </h2>
+<p>
+      Whether you are dealing with unreliable systems, security
+      concerns, an upcoming project, limited internal IT resources,
+      or uncertainty about what to improve first, Bleufoot can help
+      you understand the situation and define the right next step.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request">
+        Request a Consultation →
+      </a>
+<a class="btn btn-secondary" href="/services">
+        Explore Our Services
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

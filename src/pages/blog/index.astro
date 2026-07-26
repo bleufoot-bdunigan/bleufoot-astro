@@ -1,0 +1,142 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (
+  await getCollection('blog', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  })
+).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const featuredPost = posts[0];
+const remainingPosts = posts.slice(1);
+---
+
+<BaseLayout
+  title="Technology Insights | Bleufoot Solutions"
+  description="Technology guidance covering managed services, cybersecurity, cloud infrastructure, networking, and IT strategy for Austin and Central Texas businesses."
+  canonical="https://www.bleufoot.com/blog"
+  activePage="blog"
+  pageStylesheet="/assets/css/blog.css"
+  openGraph={{
+    title: 'Technology Insights | Bleufoot Solutions',
+    description:
+      'Practical technology guidance for businesses throughout Austin and Central Texas.',
+    url: 'https://www.bleufoot.com/blog',
+  }}
+>
+  <main>
+    <section class="blog-page-header">
+      <div class="container">
+        <p class="eyebrow">Technology Insights</p>
+
+        <h1>Practical guidance for better technology decisions</h1>
+
+        <p>
+          Articles covering technology strategy, managed services,
+          cybersecurity, cloud infrastructure, and networking.
+        </p>
+      </div>
+    </section>
+
+    {
+      featuredPost && (
+        <section class="featured-post-section">
+          <div class="container">
+            <article class="featured-post">
+              {featuredPost.data.heroImage && (
+                <a href={`/blog/${featuredPost.id}`}>
+                  <img
+                    src={featuredPost.data.heroImage}
+                    alt={featuredPost.data.heroAlt ?? ''}
+                    width="1200"
+                    height="630"
+                  />
+                </a>
+              )}
+
+              <div class="featured-post-content">
+                <p class="blog-category">
+                  {featuredPost.data.category}
+                </p>
+
+                <h2>
+                  <a href={`/blog/${featuredPost.id}`}>
+                    {featuredPost.data.title}
+                  </a>
+                </h2>
+
+                <p>{featuredPost.data.description}</p>
+
+                <time datetime={featuredPost.data.pubDate.toISOString()}>
+                  {featuredPost.data.pubDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </time>
+
+                <a
+                  class="blog-read-more"
+                  href={`/blog/${featuredPost.id}`}
+                >
+                  Read article →
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+      )
+    }
+
+    <section class="blog-list-section">
+      <div class="container">
+        <div class="blog-grid">
+          {
+            remainingPosts.map((post) => (
+              <article class="blog-card">
+                {post.data.heroImage && (
+                  <a href={`/blog/${post.id}`}>
+                    <img
+                      src={post.data.heroImage}
+                      alt={post.data.heroAlt ?? ''}
+                      width="600"
+                      height="315"
+                      loading="lazy"
+                    />
+                  </a>
+                )}
+
+                <div class="blog-card-content">
+                  <p class="blog-category">{post.data.category}</p>
+
+                  <h2>
+                    <a href={`/blog/${post.id}`}>
+                      {post.data.title}
+                    </a>
+                  </h2>
+
+                  <p>{post.data.description}</p>
+
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+
+                  <a class="blog-read-more" href={`/blog/${post.id}`}>
+                    Read article →
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.bleufoot.com/about#webpage",
+      "url": "https://www.bleufoot.com/about",
+      "name": "About Bleufoot Solutions | Austin Technology Partner",
+      "description": "Learn about Bleufoot Solutions, an Austin technology advisory and services firm focused on strategic planning, proactive support, infrastructure, and security.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/about#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.bleufoot.com/about"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"About Bleufoot Solutions | Austin Technology Partner"}
+  description={"Learn about Bleufoot Solutions, an Austin technology advisory and services firm focused on strategic planning, proactive support, infrastructure, and security."}
+  canonical={"https://www.bleufoot.com/about"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage={"about"}
+  openGraph={{"title": "About Bleufoot Solutions | Austin Technology Partner", "description": "An Austin technology advisory and services firm focused on strategic planning, proactive support, infrastructure, and security.", "url": "https://www.bleufoot.com/about", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>About Bleufoot</h4></div><h1>Technology that moves business forward.</h1><p>Bleufoot Solutions is a technology solutions and advisory firm focused on helping organizations use technology as a strategic business asset, not just a support expense.</p></div><div class="hero-panel"><ul><li>Strategic planning</li><li>Engineering-focused execution</li><li>Proactive support</li><li>Practical security guidance</li></ul></div></div></section>
+<section class="section"><div class="container split"><aside class="sticky-note"><div class="kicker"><h4>Our role</h4></div><h2>A trusted technology partner.</h2><p>We help business leaders understand their environment, make informed decisions, reduce risk, and build technology that supports growth.</p><a class="btn btn-primary" href="/quote-request">Start a Conversation →</a></aside><div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3l8 18-8-4-8 4 8-18z"></path><path d="M12 3v14"></path></svg></span><div><h3>Who we are</h3><p>Bleufoot helps organizations modernize infrastructure, improve support, strengthen cybersecurity, manage cloud platforms, and align technology decisions with business goals.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg></span><div><h3>What makes us different</h3><p>Many providers wait for problems to occur. We focus on prevention, documentation, proactive maintenance, and clear guidance so businesses can operate with more confidence.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><div><h3>How we partner</h3><p>We work with leadership, users, vendors, and technical teams to bring structure to technology decisions and reduce friction across the organization.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 7-9"></path><path d="M14 6h6v6"></path></svg></span><div><h3>Our commitment</h3><p>We are not here to sell technology for its own sake. We are here to help businesses succeed through thoughtful planning, reliable support, and practical execution.</p></div></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>A practical technology partner</h4>
+</div>
+<h2>
+      Work with someone who explains the reasoning behind the technology.
+    </h2>
+<p>
+      Bleufoot combines technical experience, strategic planning,
+      and straightforward communication to help businesses make
+      better decisions, solve immediate problems, and prepare for
+      future growth.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request">
+        Request a Consultation →
+      </a>
+<a class="btn btn-secondary" href="/services">
+        Explore Our Services
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

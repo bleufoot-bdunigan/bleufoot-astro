@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bleufoot.com/consulting#webpage",
+      "url": "https://www.bleufoot.com/consulting",
+      "name": "IT Consulting & vCIO Services in Austin | Bleufoot",
+      "description": "Strategic IT consulting, vCIO advisory, technology assessments, project planning, and infrastructure modernization for Austin-area businesses.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/consulting#service"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/consulting#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bleufoot.com/consulting#service"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/consulting#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bleufoot.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Strategic Technology Consulting",
+          "item": "https://www.bleufoot.com/consulting"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.bleufoot.com/consulting#service",
+      "name": "Strategic Technology Consulting",
+      "serviceType": "IT consulting and virtual CIO services",
+      "url": "https://www.bleufoot.com/consulting",
+      "description": "Strategic IT consulting, vCIO advisory, technology assessments, project planning, and infrastructure modernization for Austin-area businesses.",
+      "provider": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"IT Consulting & vCIO Services in Austin | Bleufoot"}
+  description={"Strategic IT consulting, vCIO advisory, technology assessments, project planning, and infrastructure modernization for Austin-area businesses."}
+  canonical={"https://www.bleufoot.com/consulting"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage="services"
+  openGraph={{"title": "IT Consulting & vCIO Services in Austin | Bleufoot", "description": "Strategic IT consulting, vCIO advisory, technology assessments, project planning, and modernization for Austin-area businesses.", "url": "https://www.bleufoot.com/consulting", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Strategic Technology Consulting</h4></div><h1>Well-informed technology decisions create a stronger foundation for your business.</h1><p>Technology should support your goals, not dictate them. Bleufoot helps you evaluate options, reduce risk, and create practical roadmaps before major technology spending begins.</p></div><div class="hero-panel"><ul><li>vCIO advisory</li><li>Technology assessments</li><li>Project planning</li><li>Infrastructure modernization</li></ul></div></div></section>
+<section class="section"><div class="container split"><aside class="sticky-note"><div class="kicker"><h4>Strategy before spending</h4></div><h2>Plan with purpose. Invest with confidence.</h2><p>Every technology investment has long-term implications. Better planning reduces waste, uncertainty, and disruption.</p></aside><div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><div><h3>Virtual CIO / Technology Advisor</h3><p>Executive-level technology leadership without the full-time cost. We help with planning, budgeting, vendor decisions, security priorities, and long-term technology direction.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 3l8 18-8-4-8 4 8-18z"></path><path d="M12 3v14"></path></svg></span><div><h3>Technology Assessments</h3><p>We evaluate infrastructure, networks, cloud services, security posture, workflows, risks, and opportunities so you can understand where you stand today.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg></span><div><h3>Strategic Project Planning</h3><p>We define objectives, requirements, timelines, risks, dependencies, and expectations before work begins.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 7-9"></path><path d="M14 6h6v6"></path></svg></span><div><h3>Project Leadership</h3><p>We help coordinate vendors, stakeholders, and technical execution so projects stay aligned with business goals.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="6" rx="2" width="18" x="3" y="4"></rect><rect height="6" rx="2" width="18" x="3" y="14"></rect><path d="M7 7h.01M7 17h.01"></path></svg></span><div><h3>Infrastructure Modernization</h3><p>We help modernize servers, virtualization, cloud services, identity systems, networks, and core business technology.</p></div></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Plan before you invest</h4>
+</div>
+<h2>
+      Make your next technology decision with greater clarity and confidence.
+    </h2>
+<p>
+      Whether you are planning a major project, evaluating vendors,
+      modernizing aging systems, or trying to establish a practical
+      technology roadmap, Bleufoot can help you define the right next step.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request?service=Strategic%20Technology%20Consulting">
+        Request a Technology Consultation →
+      </a>
+<a class="btn btn-secondary" href="/contact">
+        Ask a Question
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

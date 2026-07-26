@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bleufoot.com/infrastructure#webpage",
+      "url": "https://www.bleufoot.com/infrastructure",
+      "name": "Cloud & Infrastructure Services in Austin | Bleufoot",
+      "description": "Cloud and infrastructure services for Austin businesses, including servers, virtualization, hybrid environments, monitoring, applications, backups, and recovery.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/infrastructure#service"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/infrastructure#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bleufoot.com/infrastructure#service"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/infrastructure#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bleufoot.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cloud & Infrastructure",
+          "item": "https://www.bleufoot.com/infrastructure"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.bleufoot.com/infrastructure#service",
+      "name": "Cloud and Infrastructure Management",
+      "serviceType": "Cloud infrastructure and systems management",
+      "url": "https://www.bleufoot.com/infrastructure",
+      "description": "Cloud and infrastructure services for Austin businesses, including servers, virtualization, hybrid environments, monitoring, applications, backups, and recovery.",
+      "provider": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Cloud & Infrastructure Services in Austin | Bleufoot"}
+  description={"Cloud and infrastructure services for Austin businesses, including servers, virtualization, hybrid environments, monitoring, applications, backups, and recovery."}
+  canonical={"https://www.bleufoot.com/infrastructure"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage="services"
+  openGraph={{"title": "Cloud & Infrastructure Services in Austin | Bleufoot", "description": "Cloud and infrastructure services including servers, virtualization, hybrid environments, monitoring, applications, backups, and recovery.", "url": "https://www.bleufoot.com/infrastructure", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Cloud &amp; Infrastructure</h4></div><h1>Secure, scalable infrastructure built for today and ready for tomorrow.</h1><p>Servers, cloud platforms, virtualization, applications, networks, backups, and security all need to work together to keep your organization productive.</p></div><div class="hero-panel"><ul><li>Physical and virtual servers</li><li>Cloud and hybrid environments</li><li>Business application support</li><li>Backup and recovery strategy</li></ul></div></div></section>
+<section class="section"><div class="container split"><aside class="sticky-note"><div class="kicker"><h4>Strong foundations</h4></div><h2>Infrastructure should create confidence, not uncertainty.</h2><p>We help design, manage, secure, and optimize technology foundations that support daily operations and future growth.</p></aside><div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg></span><div><h3>Monitoring &amp; Proactive Management</h3><p>Monitor systems, servers, applications, storage, cloud resources, and network services so potential issues can be addressed early.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="6" rx="2" width="18" x="3" y="4"></rect><rect height="6" rx="2" width="18" x="3" y="14"></rect><path d="M7 7h.01M7 17h.01"></path></svg></span><div><h3>Physical &amp; Virtual Server Management</h3><p>Support for physical servers, virtual machines, hosted platforms, and core business workloads.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><div><h3>Cloud &amp; Hybrid Infrastructure</h3><p>Design and management for cloud services, on-premises systems, and hybrid environments that align with operations and security needs.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="3" y="14"></rect><rect height="7" width="7" x="14" y="14"></rect></svg></span><div><h3>Business Application Support</h3><p>Installation, troubleshooting, maintenance, and support for the software platforms your team relies on.</p></div></div>
+<div class="feature-row"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span><div><h3>Backup &amp; Recovery Strategy</h3><p>Backup planning designed around your systems, data, risk tolerance, and recovery needs.</p></div></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Build a more dependable foundation</h4>
+</div>
+<h2>
+      Improve the reliability, security, and manageability of your infrastructure.
+    </h2>
+<p>
+      Whether you are modernizing servers, moving workloads to the
+      cloud, improving backup and recovery, supporting business
+      applications, or managing a hybrid environment, Bleufoot can
+      help you create a practical infrastructure plan.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request?service=Cloud%20%26%20Infrastructure%20Management">
+  Discuss Your Infrastructure →
+</a>
+<a class="btn btn-secondary" href="/contact">
+        Ask an Infrastructure Question
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

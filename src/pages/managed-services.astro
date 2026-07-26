@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.bleufoot.com/#organization",
+      "name": "Bleufoot Solutions",
+      "url": "https://www.bleufoot.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.bleufoot.com/#logo",
+        "url": "https://www.bleufoot.com/assets/img/logo.svg",
+        "contentUrl": "https://www.bleufoot.com/assets/img/logo.svg",
+        "caption": "Bleufoot Solutions"
+      },
+      "image": "https://www.bleufoot.com/assets/img/og-image.png",
+      "email": "info@bleufoot.com",
+      "telephone": "+1-737-260-7072",
+      "description": "Technology advisory, managed IT services, cybersecurity, cloud infrastructure, and network services for businesses.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-737-260-7072",
+        "email": "info@bleufoot.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bleufoot.com/#website",
+      "url": "https://www.bleufoot.com/",
+      "name": "Bleufoot Solutions",
+      "publisher": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bleufoot.com/managed-services#webpage",
+      "url": "https://www.bleufoot.com/managed-services",
+      "name": "Managed IT Services & Support in Austin | Bleufoot",
+      "description": "Proactive managed IT services for Austin businesses, including help desk support, endpoint management, monitoring, patching, cloud support, and security.",
+      "isPartOf": {
+        "@id": "https://www.bleufoot.com/#website"
+      },
+      "about": {
+        "@id": "https://www.bleufoot.com/managed-services#service"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.bleufoot.com/managed-services#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bleufoot.com/managed-services#service"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bleufoot.com/managed-services#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bleufoot.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bleufoot.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Managed Technology Services",
+          "item": "https://www.bleufoot.com/managed-services"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.bleufoot.com/managed-services#service",
+      "name": "Managed Technology Services",
+      "serviceType": "Managed IT services and business technology support",
+      "url": "https://www.bleufoot.com/managed-services",
+      "description": "Proactive managed IT services for Austin businesses, including help desk support, endpoint management, monitoring, patching, cloud support, and security.",
+      "provider": {
+        "@id": "https://www.bleufoot.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin, Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Texas"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={"Managed IT Services & Support in Austin | Bleufoot"}
+  description={"Proactive managed IT services for Austin businesses, including help desk support, endpoint management, monitoring, patching, cloud support, and security."}
+  canonical={"https://www.bleufoot.com/managed-services"}
+  robots={"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  activePage="services"
+  openGraph={{"title": "Managed IT Services & Support in Austin | Bleufoot", "description": "Proactive managed IT services including help desk support, endpoint management, monitoring, patching, cloud support, and security.", "url": "https://www.bleufoot.com/managed-services", "image": "https://www.bleufoot.com/assets/img/og-image.png", "imageType": "image/png", "imageWidth": "1200", "imageHeight": "630", "imageAlt": "Bleufoot Solutions technology services"}}
+  structuredData={structuredData}
+>
+<main>
+<section class="page-hero"><div class="container page-hero-grid"><div><div class="eyebrow"><h4>Managed Technology Services</h4></div><h1>Proactive technology support that keeps your business reliable, secure, and productive.</h1><p>Managed services should do more than respond when something breaks. Bleufoot monitors, maintains, supports, documents, and improves your technology environment.</p></div><div class="hero-panel"><ul><li>User support</li><li>Endpoint management</li><li>Monitoring and maintenance</li><li>Security-focused operations</li></ul></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="kicker"><h4>Support that works ahead of problems</h4></div><h2>Reliable support for the systems, users, and devices your business depends on.</h2></div><p>Our managed services simplify technology operations, reduce disruptions, improve the employee experience, and create better visibility.</p></div>
+<div class="grid grid-3">
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M5 13h3v6H5zM16 13h3v6h-3z"></path><path d="M16 19a4 4 0 0 1-4 2"></path></svg></span><h3>User &amp; Help Desk Support</h3><p>Professional assistance for workstation issues, accounts, access, applications, printers, devices, and common user needs.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="11" rx="2" width="16" x="4" y="5"></rect><path d="M8 21h8M12 16v5"></path></svg></span><h3>Endpoint &amp; Device Management</h3><p>Configuration, updates, security controls, maintenance, and lifecycle planning for business devices.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg></span><h3>Monitoring &amp; Maintenance</h3><p>Visibility into critical systems, devices, services, and performance indicators before small issues become major disruptions.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-2.8-2.8 2.2-2.6z"></path></svg></span><h3>Patch &amp; Update Management</h3><p>A consistent approach to software updates, operating system patches, and routine maintenance.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17.5 19H8a5 5 0 1 1 1.1-9.9A6 6 0 0 1 20 12.5 3.5 3.5 0 0 1 17.5 19z"></path></svg></span><h3>Cloud Productivity Support</h3><p>Support for Microsoft 365, Google Workspace, SaaS tools, email, collaboration, permissions, and user access.</p></div>
+<div class="card"><span class="icon-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-5"></path></svg></span><h3>Security-Focused Operations</h3><p>Practical controls, visibility, user support, patching, endpoint protection, backups, and access management.</p></div>
+</div></div></section>
+<section class="cta-band">
+<div class="container">
+<div class="kicker">
+<h4>Move beyond reactive support</h4>
+</div>
+<h2>
+      Give your team dependable technology support before small issues become business disruptions.
+    </h2>
+<p>
+      Whether you need ongoing user support, endpoint management,
+      monitoring, patching, cloud administration, documentation,
+      or additional support for an internal IT team, Bleufoot can
+      help build a practical managed-services plan around your business.
+    </p>
+<div class="hero-actions">
+<a class="btn btn-light" href="/quote-request?service=Managed%20Technology%20Services">
+  Discuss Managed Technology Services →
+</a>
+<a class="btn btn-secondary" href="/contact">
+        Ask a Support Question
+      </a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

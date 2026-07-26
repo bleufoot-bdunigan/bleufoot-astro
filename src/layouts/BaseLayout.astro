@@ -1,0 +1,119 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface OpenGraph {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  imageType?: string;
+  imageWidth?: string;
+  imageHeight?: string;
+  imageAlt?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  robots?: string;
+  activePage?: 'home' | 'about' | 'blog' | 'contact';
+  openGraph?: OpenGraph;
+  structuredData?: unknown;
+  pageStylesheet?: string;
+  calendarAssets?: boolean;
+  turnstile?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  activePage,
+  openGraph,
+  structuredData,
+  pageStylesheet,
+  calendarAssets = false,
+  turnstile = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="application-name" content="Bleufoot Solutions" />
+    <meta name="theme-color" content="#06192d" />
+
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    {openGraph && (
+      <>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Bleufoot Solutions" />
+        <meta property="og:title" content={openGraph.title} />
+        <meta property="og:description" content={openGraph.description} />
+        <meta property="og:url" content={openGraph.url} />
+        <meta property="og:image" content={openGraph.image ?? 'https://www.bleufoot.com/assets/img/og-image.png'} />
+        <meta property="og:image:secure_url" content={openGraph.image ?? 'https://www.bleufoot.com/assets/img/og-image.png'} />
+        <meta property="og:image:type" content={openGraph.imageType ?? 'image/png'} />
+        <meta property="og:image:width" content={openGraph.imageWidth ?? '1200'} />
+        <meta property="og:image:height" content={openGraph.imageHeight ?? '630'} />
+        <meta property="og:image:alt" content={openGraph.imageAlt ?? 'Bleufoot Solutions technology services'} />
+      </>
+    )}
+
+    <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    {calendarAssets && (
+      <link
+        rel="stylesheet"
+        href="https://calendar.google.com/calendar/scheduling-button-script.css"
+      />
+    )}
+
+    {turnstile && (
+      <script
+        is:inline
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+      ></script>
+    )}
+
+    {pageStylesheet && <link rel="stylesheet" href={pageStylesheet} />}
+    {structuredData && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(structuredData)}
+      ></script>
+    )}
+  </head>
+
+  <body>
+    <Header activePage={activePage} />
+    <slot />
+    <Footer />
+
+    {calendarAssets && (
+      <script
+        is:inline
+        src="https://calendar.google.com/calendar/scheduling-button-script.js"
+        async
+      ></script>
+    )}
+    <script is:inline src="/assets/js/main.js?v=20260721-1"></script>
+  </body>
+</html>
