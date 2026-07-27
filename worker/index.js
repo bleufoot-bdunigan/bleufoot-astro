@@ -11,6 +11,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    if (url.hostname === "bleufoot.com") {
+      url.hostname = "www.bleufoot.com";
+
+      return Response.redirect(url.toString(), 308);
+    }
+
     if (url.pathname === "/api/quote" || url.pathname === "/api/quote/") {
       if (request.method === "POST") {
         return handleQuoteSubmission(request, env);
