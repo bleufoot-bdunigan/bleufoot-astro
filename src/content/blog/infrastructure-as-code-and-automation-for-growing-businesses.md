@@ -15,7 +15,7 @@ tags:
   - Small Business Technology
   - Central Texas
 
-heroImage: "/assets/img/blog/iac-blog.jpg"
+heroImage: "/assets/img/blog/iac-blog.png"
 heroAlt: "Diagram showing Terraform provisioning infrastructure and Ansible configuring physical and virtual systems"
 
 draft: false
