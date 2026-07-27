@@ -1,5 +1,5 @@
 ---
-title: "Personal vs. Enterprise Password Managers: What Businesses Need to Know"
+title: "Password Managers: Personal vs. Enterprise - What Businesses Need to Know"
 
 description: "Learn how personal and enterprise password managers differ, why company ownership of business credentials matters, and what features businesses should evaluate."
 
