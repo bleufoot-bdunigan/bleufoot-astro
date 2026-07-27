@@ -18,7 +18,7 @@ tags:
 heroImage: "/assets/img/blog/iac-blog.jpg"
 heroAlt: "Diagram showing Terraform provisioning infrastructure and Ansible configuring physical and virtual systems"
 
-draft: true
+draft: false
 ---
 
 Many small and midsize businesses build their technology environments one system at a time. A virtual machine is created manually, a firewall rule is added through a web interface, and an administrator installs and configures software using a checklist—or sometimes from memory.
