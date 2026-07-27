@@ -19,6 +19,8 @@ tags:
   - Identity and Access Management
   - Small Business IT
 
+heroImage: "/assets/img/blog/password-manager.png"
+heroAlt: "Password Manager"
 draft: false
 ---
 
