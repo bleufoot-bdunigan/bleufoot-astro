@@ -1,15 +1,25 @@
 ---
 title: "Personal vs. Enterprise Password Managers: What Businesses Need to Know"
+
 description: "Learn how personal and enterprise password managers differ, why company ownership of business credentials matters, and what features businesses should evaluate."
-excerpt: "A personal password manager may protect an individual employee’s passwords, but it does not necessarily give a business the ownership, access controls, auditing, and recovery capabilities needed to manage company credentials."
-slug: "personal-vs-enterprise-password-managers"
+
+pubDate: 2026-07-26
+
 author: "Bleufoot Solutions"
-draft: true
+
+excerpt: "A personal password manager may protect an individual employee’s passwords, but it does not necessarily give a business the ownership, access controls, auditing, and recovery capabilities needed to manage company credentials."
+
+slug: "personal-vs-enterprise-password-managers"
+
+category: "Managed Technology"
+
 tags:
   - Password Management
   - Cybersecurity
   - Identity and Access Management
   - Small Business IT
+
+draft: false
 ---
 
 # Personal vs. Enterprise Password Managers: What Businesses Need to Know

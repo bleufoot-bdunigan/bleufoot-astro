@@ -1,8 +1,14 @@
 ---
 title: "How to Choose an IT Provider for Your Business"
+
 description: "What Central Texas businesses should evaluate when selecting an IT support and consulting provider."
-pubDate: 2026-07-26
+
+pubDate: 2026-07-22
+
 author: "Bleufoot Solutions"
+
+slug: "how-to-choose-an-it-provider"
+
 category: "Managed Technology"
 
 tags:
@@ -12,6 +18,7 @@ tags:
 
 heroImage: "/assets/img/blog/how-to-choose-an-it-provider.jpg"
 heroAlt: "Business leaders reviewing technology services together"
+
 draft: false
 ---
 
